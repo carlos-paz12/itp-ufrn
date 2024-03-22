@@ -4,16 +4,19 @@ using namespace std;
 
 int main()
 {
-    int a, b, c, d;
+    int a, b, c, d, sum;
     cin >> a >> b >> c >> d;
+    sum = a + b + c + d;
 
-    if ((a + b + c + d) != 0)
+    if (sum != 0)
     {
-        // TO DO
+        sum = (sum - 1) % 26;
+        char letter = 'A' + sum;
+        cout << "Letra: " << letter << "\n";
     }
     else
     {
-        cout << "Ei! Ninguém coolocou nada";
+        cout << "Ei! Ninguém colocou nada!" << "\n";
     }
 
     return 0;
