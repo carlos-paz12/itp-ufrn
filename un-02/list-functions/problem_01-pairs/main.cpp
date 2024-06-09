@@ -1,24 +1,19 @@
 #define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
-#include ".\doctest.h"
+#include "../doctest.h"
 
 /*
  * Altere a função `pares()` abaixo de forma que ela retorne a quantidade de
  * dígitos pares do número passado como parâmetro.
  * Por exemplo, o número 19274 tem dois dígitos pares: 2 e 4.
  */
-
 int pares(unsigned int numero)
 {
-  if (numero) return 1;
+  if (numero == 0) return 1;
   int c = 0;
   while (numero > 0)
   {
-    bool isPair = numero % 2 == 0;
-    if (isPair)
-    {
-      c++;
-    }
-    numero /= 10; 
+    if (numero % 2 == 0) c++;
+    numero /= 10;
   }
   return c;
 }

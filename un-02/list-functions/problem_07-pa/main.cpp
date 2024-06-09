@@ -1,27 +1,24 @@
 #define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
-#include "doctest.h"
+#include "../doctest.h"
 
 /*
  * Altere a função a seguir de forma que ela verifique se uma sequência de inteiros é
  * uma P.A (progressão aritmética). Se for, altere o parâmetro passado com o valor da
  * razão da P.A.
  */
-
 bool eh_PA(int tamanho, int sequencia[], int &razao)
 {
-  /*
-    if (tamanho > 2)
-    {
-        eh_PA(tamanho - 1, sequencia, razao);
-        bool true_or_false = sequencia[tamanho - 2] + razao == sequencia[tamanho - 1];
-        return true_or_false;
-    }
-    else
-    {
-        razao = sequencia[tamanho - 1] - sequencia[tamanho - 2];
-        return true;
-    }
-     */
+  if (tamanho > 2)
+  {
+    eh_PA(tamanho - 1, sequencia, razao);
+    bool true_or_false = sequencia[tamanho - 2] + razao == sequencia[tamanho - 1];
+    return true_or_false;
+  }
+  else
+  {
+    razao = sequencia[tamanho - 1] - sequencia[tamanho - 2];
+    return true;
+  }
 }
 
 TEST_CASE("Testando uma sequência que é uma PA.")

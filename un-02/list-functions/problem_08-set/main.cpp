@@ -10,7 +10,6 @@
  * A ordem em que os elementos se encontram na sequência resultante da operação
  * deverá ser a mesma da sequência original.
  */
-
 void conjunto(int &tamanho, int sequencia[]) {
 }
 
@@ -36,6 +35,6 @@ TEST_CASE("Testando uma sequência sem repetições.") {
   CHECK(seq[2] == -1);
   CHECK(seq[3] == 7);
   CHECK(seq[4] == 1);
-  CHECK(seq[5] == 5);
+  CHECK(seq[5] == 4);
 }
 

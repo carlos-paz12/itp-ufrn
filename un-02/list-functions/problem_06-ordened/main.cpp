@@ -1,13 +1,13 @@
 #define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
-#include "doctest.h"
+#include "../doctest.h"
 
 /*
  * Altere a função a seguir de forma que ela verifique se uma sequência de inteiros está
  * em ordem crescente.
  */
-
 bool esta_ordenado(int tamanho, int sequencia[]) {
-  return false;
+  if (tamanho < 2) return true;
+  else return (sequencia[tamanho - 2] < sequencia[tamanho - 1]) && esta_ordenado(tamanho - 1, sequencia);
 }
 
 TEST_CASE("Testando uma sequência ordenada.") {
@@ -27,5 +27,5 @@ TEST_CASE("Testando uma sequência unitária.") {
 
 TEST_CASE("Testando uma sequência vazia.") {
   int seq[] = { };
-  CHECK(esta_ordenado(5, seq) == false);
+  CHECK(esta_ordenado(0, seq) == true);
 }
