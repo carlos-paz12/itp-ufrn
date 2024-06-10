@@ -45,7 +45,7 @@ bool iguais(int seq1[], int tamanho1, int seq2[], int tamanho2)
     int c = 0;
     for (int i = 0; i < tamanho1; i++)
     {
-      for (int j = i; j < tamanho1; j++)
+      for (int j = 0; j < tamanho1; j++)
       {
         if (seq1[i] == seq2[j])
         {
