@@ -1,5 +1,6 @@
 #define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
-#include "doctest.h"
+#include "../doctest.h"
+#include <cstring>
 
 /*
  * Implemente uma função para contar quantas vezes um determinado caractere aparece
@@ -12,7 +13,17 @@
  * Considere também que não haverá caractere especial na string (cedilha, letras
  * acentuadas etc.).
  */
-
+int conta_caractere(char str[], char ch)
+{
+  int c = 0;
+  for (int i = 0; i < strlen(str); i++)
+  {
+    str[i] = tolower(str[i]);
+    ch = tolower(ch);
+    if (str[i] == ch) c++;
+  }
+  return c;
+}
 
 
 TEST_CASE("Testando com uma string qualquer.") {
