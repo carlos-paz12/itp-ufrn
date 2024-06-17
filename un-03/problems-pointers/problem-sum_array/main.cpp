@@ -1,4 +1,4 @@
-#define DOCTEST_CONFIG_IMPLEMENTS_WITH_MAIN
+#define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
 #include "../doctest.h"
 /*
  * Implemente uma função que soma dois vetores
@@ -53,7 +53,7 @@ TEST_CASE("s_a < s_b")
     int *ab = sum_array(4, a, 8, b, new_s);
 
     CHECK(ab[0] == 1);
-    CHECK(ab[1] == 1);
-    CHECK(ab[2] == 1);
+    CHECK(ab[1] == 3);
+    CHECK(ab[2] == 4);
     CHECK(new_s == 4);
 }
